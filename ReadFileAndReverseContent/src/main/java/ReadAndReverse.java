@@ -21,8 +21,8 @@ public class ReadAndReverse {
 		System.out.println("Welcome HSBC, Thank You for Considering my Candidature for the Role");
 		System.out.println("Reading input file input.txt in the project");
 		try{
-		System.out.println("########## INPUT FILENAME ###########" +inputFileName);
-		System.out.println("########## OUTPUT FILENAME ###########" +outputFileName);
+		System.out.println("########## INPUT FILENAME ###########" +Paths.get(inputFileName));
+		System.out.println("########## OUTPUT FILENAME ###########" +Paths.get(outputFileName));
 		}catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -35,12 +35,11 @@ public class ReadAndReverse {
 			result = "PASS";
 		} catch (Exception e) {
 			result = "FAIL";
-			System.out.println(" There was an error while reading or Writing File, PLease check exception for details"
+			System.out.println(" There was an error while reading or Writing File, Please check exception for details"
 					+ e.getMessage());
 			e.printStackTrace();
 			return result;
 		}
-		System.out.println("########## OUTPUT FILENAME ###########" + outputFileName);
 		return result;
 	}
 }

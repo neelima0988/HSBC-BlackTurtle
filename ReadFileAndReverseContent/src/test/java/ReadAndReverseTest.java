@@ -11,7 +11,7 @@ public class ReadAndReverseTest {
 	public void testSuccess() {
 		ReadAndReverse operationRead = new ReadAndReverse();
 		String result = operationRead.readAndReverseFileContent("input.txt", "output.txt");
-		System.out.println(result);
+		System.out.println("testSuccess  result : "+result);
 		assertEquals("PASS", result);
 	}
 
@@ -19,7 +19,7 @@ public class ReadAndReverseTest {
 	public void testInputFile() {
 		ReadAndReverse operationRead = new ReadAndReverse();
 		String result = operationRead.readAndReverseFileContent("", "out1.txt");
-		System.out.println(result);
+		System.out.println("testInputFile  result : "+result);
 		assertEquals("FAIL", result);
 	}
 
@@ -27,7 +27,7 @@ public class ReadAndReverseTest {
 	public void testOutputFile() {
 		ReadAndReverse operationRead = new ReadAndReverse();
 		String result = operationRead.readAndReverseFileContent("input.txt", "");
-		System.out.println(result);
+		System.out.println("testOutputFile  result : "+result);
 		assertEquals("FAIL", result);
 	}
 
